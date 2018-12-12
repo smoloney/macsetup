@@ -1,0 +1,5 @@
+# Macbook pro setup
+
+- hosts: mac
+  roles:
+    - setup
