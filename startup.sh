@@ -20,7 +20,7 @@ mkdir $installDir
 
 echo "Cloning git repo."
 
-git clone https://github.com/smoloney/macsetup.git $installDir
+git clone -b development https://github.com/smoloney/macsetup.git $installDir
 
 
 if [! $installDir ]; then
@@ -34,7 +34,7 @@ fi
 
 
 echo "Cleaning up from install."
-rm -rf $installDir
+#rm -rf $installDir
 
 echo "All done!  Enjoy your new mac."
 
