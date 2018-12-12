@@ -1,0 +1,7 @@
+# Testing downloading config files
+
+
+- name: emacs config files
+  git:
+    repo: https://github.com/smoloney/emacs
+    dest: "{{home.local_home}}"
