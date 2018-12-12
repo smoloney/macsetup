@@ -9,7 +9,6 @@ echo ===========================
 sudo easy_install pip
 sudo easy_install ansible
 
-#sudo -H pip install git
 
 # creating temp directory for instal
 
