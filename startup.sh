@@ -11,7 +11,7 @@ sudo easy_install pip
 sudo pip install cryptography
 sudo easy_install ansible
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
 # creating temp directory for instal
