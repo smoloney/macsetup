@@ -7,11 +7,11 @@ general:
 
 
 applications:
-    -git
-    -tree
-    -curl
-    -wget
-    -vim
+    - git
+    - tree
+    - curl
+    - wget
+    - vim
     
 
 # Homebrew cask
