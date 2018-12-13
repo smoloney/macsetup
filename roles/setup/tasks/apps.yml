@@ -4,7 +4,7 @@
   include: homebrew.yml
 
 - name: get downloads
-    get_url: 
+    - get_url: 
       url: "{{item.value.url}}"
       dest: "{{item.value.dest}}"
     with_dict:"{{downloads}}"
