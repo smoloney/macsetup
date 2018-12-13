@@ -9,31 +9,31 @@ echo ===========================
 sudo easy_install pip
 
 sudo pip install crytography
-sudo easy_install ansible
+#sudo easy_install ansible
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-
-# creating temp directory for instal
-
-installDir="/tmp/setupmac"
-
-mkdir $installDir
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
-echo "Cloning git repo."
+# # creating temp directory for instal
 
-git clone -b development https://github.com/smoloney/macsetup.git $installDir
+# installDir="/tmp/setupmac"
+
+# mkdir $installDir
 
 
-if [! $installDir ]; then
-    echo "Failed to find mac setup files."
-    echo "Git clone failed."
-    exit 1
-else
-    cd $installDir
-    ansible-playbook -i ./hosts playbook.yml --verbose
-fi
+# echo "Cloning git repo."
+
+# git clone -b development https://github.com/smoloney/macsetup.git $installDir
+
+
+# if [! $installDir ]; then
+#     echo "Failed to find mac setup files."
+#     echo "Git clone failed."
+#     exit 1
+# else
+#     cd $installDir
+#     ansible-playbook -i ./hosts playbook.yml --verbose
+# fi
 
 
 echo "Cleaning up from install."
