@@ -35,6 +35,10 @@ else
     ansible-playbook -i ./hosts playbook.yml --verbose
 fi
 
+trizicPath =/Users/$(whoami)/Documents/Trizic/
+mkdir $trizicPath
+
+
 
 echo "Cleaning up from install."
 rm -rf $installDir

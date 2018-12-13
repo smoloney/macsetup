@@ -12,6 +12,9 @@ applications:
     - curl
     - wget
     - vim
+    - maven
+    - openssl
+    - direnv
     
 
 # Homebrew cask
@@ -20,16 +23,25 @@ cask:
     - google-chrome
     - slack
     - iterm2
-    - caffeine
     - docker
+    - docker-compose
     - vagrant
-    - virtualbox
+    - virtualbox #causing issues
     - emacs
-    - spotify
     - postman
 
+github:  #currently working on
+  - platform
+  - consumer-ui
+  - trizic-ops
+  - containers
+  - api-docs-advisor
+  - api-docs-consumer
+  - custodianservices
+  - td-api-java-lib
+  - client-billing
+  - messaging-common
 
-# Downloads not in homebrew
 
 downloads:
   zoom:
