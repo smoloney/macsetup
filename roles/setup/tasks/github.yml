@@ -1,5 +1,3 @@
-
-tasks:
 - name: add ssh key
   copy: >
     src=files/id_rsa.github
