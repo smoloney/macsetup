@@ -12,9 +12,9 @@ applications:
     - curl
     - wget
     - vim
-    - maven
+    #- maven java
     - openssl
-    - direnv
+   # - direnv need java
     
 
 # Homebrew cask
