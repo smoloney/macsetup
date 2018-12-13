@@ -5,9 +5,10 @@
   args:
     creates: /user/local/bin/brew
 
-- name: Update Homebrew
-    state: latest
-    update_homebrew: yes
+-   name: Update Homebrew
+    homebrew:
+        state : latest
+        update_homebrew: yes
 
 
 - name: Enable Homebrew Casks
