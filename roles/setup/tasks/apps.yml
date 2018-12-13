@@ -1,6 +1,6 @@
 
 
-- name: app installs
+- name: application  installs
   include: homebrew.yml
 
 - name: get downloads

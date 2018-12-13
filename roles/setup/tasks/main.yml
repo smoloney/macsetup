@@ -2,4 +2,4 @@
   include: apps.yml
 
 - name: configuration
-  include: configuration.yml
+  include: config.yml
