@@ -1,22 +1,20 @@
-
-
-- name: application  installs
+- name: application installs
   include: homebrew.yml
 
-- name: get downloads
-    get_url: 
-        url: "{{item.value.url}}"
-        dest: "{{item.value.dest}}"
-    with_dict:"{{downloads}}"
+- name: getting downloads 
+  get_url:
+    url: "{{item.value.url}}"
+    dest: "{{item.value.dest}}"
+  with_dict: "{{downloads}}"    
 
-- name: install homebrew apps
-    homebrew:
-        name:"{{item}}"
-        state: latest
-    with_items: "{{applications}}"
+- name: start installing homebrew applications
+  homebrew:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{applications}}"
 
-- name: Install homebrew cask apps
-    homebrew_cask:
-        name: "{{item}}"
-        state: installed
-    with_items: "{{cask}}"
+- name: start installing homebrew cask applications
+  homebrew_cask:
+    name: "{{item}}"
+    state: installed 
+  with_items: "{{cask_applications}}"

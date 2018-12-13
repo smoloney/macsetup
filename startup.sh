@@ -33,7 +33,7 @@ fi
 
 
 echo "Cleaning up from install."
-#rm -rf $installDir
+rm -rf $installDir
 
 echo "All done!  Enjoy your new mac."
 
