@@ -1,7 +1,7 @@
 # Applications to install
 
 general:
-  local_home:"{{ lookup('env', 'HOME') }} "
+  local_home: "{{ lookup('env', 'HOME') }}"
 
 # homebrew
 
