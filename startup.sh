@@ -7,6 +7,8 @@ echo "|    Mac Setup Started   |"
 echo ===========================
 # Base line packages
 sudo easy_install pip
+
+sudo pip install crytography
 sudo easy_install ansible
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
