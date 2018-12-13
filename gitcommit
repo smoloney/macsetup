@@ -1,6 +1,6 @@
 #/bin/bash
 
-echo -n "Enter commit message"
+echo -n "Enter commit message: [ENTER]"
 read COMMIT
 git add . 
 git commit -m "$COMMIT"

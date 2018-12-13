@@ -9,6 +9,8 @@ echo ===========================
 sudo easy_install pip
 sudo easy_install ansible
 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 # creating temp directory for instal
 
