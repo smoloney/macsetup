@@ -1,4 +1,4 @@
-hosts: mac
+
 tasks:
 - name: add ssh key
   copy: >
