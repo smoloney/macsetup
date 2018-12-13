@@ -1,6 +1,6 @@
 # Applications to install
 
-home:
+general:
   local_home:"{{ lookup('env', 'HOME') }} "
 
 # homebrew
@@ -17,7 +17,7 @@ applications:
 # Homebrew cask
 
 cask:
-    -google-chrome
+    - google-chrome
     - slack
     - iterm2
     - caffeine
@@ -35,5 +35,5 @@ downloads:
   zoom:
     name: Zoom
     url: https://zoom.us/support/download?os=mac
-    dest: "{{home.local_home}}/Downloads/zoom.pkg"
+    dest: "{{general.local_home}}/Downloads/zoom.pkg"
 
