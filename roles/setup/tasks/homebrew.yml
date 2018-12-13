@@ -11,6 +11,6 @@
         update_homebrew: yes
 
 
-- name: Enable Homebrew Casks
+-   name: Enable Homebrew Casks
     homebrew_tap: 
       tap: "caskroom/cask"
