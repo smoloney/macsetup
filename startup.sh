@@ -63,7 +63,8 @@ fi
 
 
 echo "Cleaning up from install."
-rm -rf $installDir
+rm -rf $installDir ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
+
 
 echo "All done!  Enjoy your new mac."
 
