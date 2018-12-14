@@ -21,7 +21,7 @@ applications:
 
 cask:
     # - google-chrome
-     - slack
+     #- slack
     # - iterm2
     # - docker
     # - docker-compose
