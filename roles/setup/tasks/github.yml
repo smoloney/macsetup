@@ -11,11 +11,11 @@
     group: user
 
     with_items: 
-     - ~/Desktop/Trizic/
-     - ~/Desktop/Trizic/platform
-     - ~/Desktop/Trizic/consumer-ui
-     - ~/Desktop/Trizic/trizic-ops
-     - ~/Desktop/Trizic/containers
+      - ~/Desktop/Trizic/
+      - ~/Desktop/Trizic/platform
+      - ~/Desktop/Trizic/consumer-ui
+      - ~/Desktop/Trizic/trizic-ops
+      - ~/Desktop/Trizic/containers
 
 # - name: Copy ssh public key file
 #   copy:
