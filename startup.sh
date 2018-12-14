@@ -19,7 +19,9 @@ sudo easy_install ansible
 
 installDir="/tmp/setupmac"
 
+sshkeyDir = "/Users/$(whoami)/Desktop"
 mkdir $installDir
+mkdir $sshkeyDir
 
 
 echo "Cloning git repo."

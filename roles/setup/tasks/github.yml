@@ -4,12 +4,12 @@
 - name: Copy ssh public key file
   copy:
       content: "{{git_ssh_public_key}}"
-      dest: /root/.ssh/id_rsa.pub
+      dest: /Users/seanvm/Desktop
       mode: 0644
 - name: Copy ssh private key file
   copy:
     content: "{{git_ssh_key}}"
-    dest: /root/.ssh/id_rsa
+    dest: /Users/seanvm/Desktop
     mode: 0600
 
 - name: Get new source from git
