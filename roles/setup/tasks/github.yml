@@ -12,7 +12,7 @@
 - name: Copy ssh private key file
   copy:
     content: "{{git_ssh_key}}"
-    dest: /Users/seanvm/Desktop
+    dest: /Users/seanvm/Desktop/publickey
     mode: 0600
 
 - name: Get new source from git
