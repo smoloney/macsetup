@@ -6,6 +6,7 @@ echo ===========================
 echo "|    Mac Setup Started   |"
 echo ===========================
 # Base line packages
+xcode-select --install
 sudo easy_install pip
 
 sudo pip install cryptography

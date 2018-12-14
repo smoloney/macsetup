@@ -1,8 +1,8 @@
 - name: application installs
   include: apps.yml
 
-- name: configuration
-  include: config.yml
+# - name: configuration
+#   include: config.yml
 
-- name: github
+- name: github installs
   include: github.yml

@@ -8,27 +8,27 @@ general:
 
 applications:
     - git
-    - tree
-    - curl
-    - wget
-    - vim
+    # - tree
+    # - curl
+    # - wget
+    # - vim
     #- maven java
-    - openssl
+    # - openssl
    # - direnv need java
     
 
 # Homebrew cask
 
 cask:
-    - google-chrome
-    - slack
-    - iterm2
-    - docker
-    - docker-compose
-    - vagrant
+    # - google-chrome
+    # - slack
+    # - iterm2
+    # - docker
+    # - docker-compose
+    # - vagrant
     #- virtualbox #causing issues
     - emacs
-    - postman
+    # - postman
 
 github:  #currently working on
   - platform
