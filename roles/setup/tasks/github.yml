@@ -3,6 +3,11 @@
     path: ~/Desktop/publickey/
     state: directory
 
+- name: create directory
+  file:
+    path: ~/Desktop/GitClone/
+    state: directory
+
 
 - name: Copy ssh public key file
   copy:
