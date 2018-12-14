@@ -3,7 +3,7 @@
     path: ~/Desktop/publickey/
     state: directory
 
-- name: create directory
+- name: create directory 2
   file:
     path: "{{item}}"
     state: directory
@@ -11,11 +11,11 @@
     group: user
 
     with_items: 
-      ~/Desktop/Trizic/
-      ~/Desktop/Trizic/platform
-      ~/Desktop/Trizic/consumer-ui
-      ~/Desktop/Trizic/trizic-ops
-      ~/Desktop/Trizic/containers
+     - ~/Desktop/Trizic/
+     - ~/Desktop/Trizic/platform
+     - ~/Desktop/Trizic/consumer-ui
+     - ~/Desktop/Trizic/trizic-ops
+     - ~/Desktop/Trizic/containers
 
 # - name: Copy ssh public key file
 #   copy:
@@ -36,3 +36,13 @@
     clone: yes
 
 
+# - name: create directory if they don't exist
+#   file:
+#     path: "{{ item }}"
+#     state: directory
+#     owner: root
+#     group: root
+#     mode: 0775
+#   with_items:
+#     - /data/directory
+#     - /data/another
