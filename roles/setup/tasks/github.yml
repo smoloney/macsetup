@@ -23,6 +23,6 @@
 - name: Get new source from git
   git:
     repo: ssh://git@github.com/smoloney/antidictionary.git
-    dest: /Users/seanvm/Desktop
+    dest: /Users/seanvm/Desktop/GitClone/
     accept_hostkey: yes
     clone: yes
