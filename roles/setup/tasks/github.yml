@@ -1,4 +1,7 @@
-
+- name: create directory
+  file:
+    path: ~/Desktop/publickey/
+    state: directory
 
 
 - name: Copy ssh public key file
