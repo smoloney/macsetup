@@ -17,7 +17,7 @@
 
 - name: Get new source from git
   git:
-    repo: "git@github.com/smoloney/antidictionary.git"
-    dest: "/Users/seanvm/Desktop"
+    repo: git@github.com/smoloney/antidictionary.git
+    dest: /Users/seanvm/Desktop
     accept_hostkey: yes
     clone: yes
