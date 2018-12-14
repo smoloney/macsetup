@@ -4,7 +4,7 @@
 - name: Copy ssh public key file
   copy:
       content: "{{git_ssh_public_key}}"
-      dest: /Users/seanvm/Desktop
+      dest: /Users/seanvm/Desktop/publickey
       mode: 0644
 - name: Copy ssh private key file
   copy:
