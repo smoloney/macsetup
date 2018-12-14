@@ -5,7 +5,7 @@
 
 - name: create directory
   file:
-    path: ~/Desktop/GitClone/
+    path: ~/Desktop/GitClone/{{item}}
     state: directory
     owner: user
     group: user
