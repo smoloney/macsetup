@@ -8,7 +8,6 @@
     path: ~/Desktop/GitClone/
     state: directory
 
-
 - name: Copy ssh public key file
   copy:
       content: "{{git_ssh_public_key}}"
@@ -26,3 +25,5 @@
     dest: /Users/seanvm/Desktop/GitClone/
     accept_hostkey: yes
     clone: yes
+
+

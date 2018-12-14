@@ -14,6 +14,8 @@ ssh-add -K ~/.ssh/id_rsa
 echo "Add public key to github"
 pbcopy < ~/.ssh/id_rsa.pub
 read -p "Press enter to continue."
+else
+    echo "Key already created"
 fi
 
 
