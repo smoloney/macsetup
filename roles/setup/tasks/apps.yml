@@ -20,24 +20,24 @@
   with_items: "{{cask}}"
 
 
-- name: add ssh key
-  copy: >
-    src=files/id_rsa.github
-    dest=/root/.ssh/id_rsa.github
-    owner=root
-    group=root
-    mode=0600
+# - name: add ssh key
+#   copy: >
+#     src=files/id_rsa.github
+#     dest=/root/.ssh/id_rsa.github
+#     owner=root
+#     group=root
+#     mode=0600
 
-- name: configure ssh to use ansible key
-  template: >
-    src=templates/ssh_config.j2
-    des=/root/.ssh/config
-    owner=root
-    group=root
-    mode=0644
+# - name: configure ssh to use ansible key
+#   template: >
+#     src=templates/ssh_config.j2
+#     des=/root/.ssh/config
+#     owner=root
+#     group=root
+#     mode=0644
 
-- name: clone repos
-  git: >
-    repo=ssh://gitclone@github.com:smoloney/a
-    key_file=/root/.ssh/id_rsa.github
-    dest=/Users/seanvm/Desktop
+# - name: clone repos
+#   git: >
+#     repo=ssh://gitclone@github.com:smoloney/a
+#     key_file=/root/.ssh/id_rsa.github
+#     dest=/Users/seanvm/Desktop

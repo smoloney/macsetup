@@ -1,0 +1,8 @@
+todo:
+
+    fix adding ssh key for github
+    get repos to clone
+    install java and setup
+
+    config settings
+    
