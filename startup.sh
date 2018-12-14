@@ -6,7 +6,7 @@ echo ===========================
 echo "|    Mac Setup Started   |"
 echo ===========================
 # Base line packages
-if ! [ -e ~/.ssh/id_rsa ] then
+if ! [[ -e ~/.ssh/id_rsa ]]; then
 echo "creating ssh key"
 ssh-keygen -t rsa -b 4096 -C "s_moloney@aol.com" -N ''
 ssh-add -K ~/.ssh/id_rsa
