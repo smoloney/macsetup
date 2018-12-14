@@ -48,10 +48,10 @@ downloads:
     name: Zoom
     url: https://zoom.us/support/download?os=mac
     dest: "{{general.local_home}}/Downloads/zoom.pkg"
-  emacs:
-    name: Emacs
-    url: https://emacsformacosx.com/emacs-builds/Emacs-26.1-2-universal.dmg
-    dest: "{{general.local_home}}/Downloads/emacs.dmg"
+  # emacs:
+  #   name: Emacs
+  #   url: https://emacsformacosx.com/emacs-builds/Emacs-26.1-2-universal.dmg
+  #   dest: "{{general.local_home}}/Downloads/emacs.dmg"
 
 git_ssh_public_key: "~/.ssh/my_ssh_key.pub"
 
