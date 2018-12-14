@@ -7,6 +7,10 @@
   file:
     path: ~/Desktop/GitClone/
     state: directory
+    owner: user
+    group: user
+
+    with_items: "{{github}}"
 
 # - name: Copy ssh public key file
 #   copy:
