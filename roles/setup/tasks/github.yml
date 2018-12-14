@@ -1,0 +1,20 @@
+
+
+
+- name: Copy ssh public key file
+  copy:
+      content: "{{git_ssh_public_key}}"
+      dest: /root/.ssh/id_rsa.pub
+      mode: 0644
+- name: Copy ssh private key file
+  copy:
+    content: "{{git_ssh_key}}"
+    dest: /root/.ssh/id_rsa
+    mode: 0600
+
+- name: Get new source from git
+  git:
+    repo: "git@github.com/smoloney/a.git"
+    dest: "/Users/seanvm/Desktop"
+    accept_hostkey: yes
+    clone: yes
