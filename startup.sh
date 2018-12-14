@@ -6,20 +6,37 @@ echo ===========================
 echo "|    Mac Setup Started   |"
 echo ===========================
 # Base line packages
+
+echo "creating ssh key"
+ssh-keygen -t rsa -b 4096 -C "s_moloney@aol.com" -N ''
+ssh-add -K ~/.ssh/id_rsa
+
+echo "Add public key to github"
+pbcopy < ~/.ssh/id_rsa.pub
+read -p "Press enter to continue."
+
+
+
+
+
+
+
+
+
+
 xcode-select --install
 sudo easy_install pip
 
 sudo pip install cryptography
 sudo easy_install ansible
-
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-
+sudo pip install ansible-vault
+ ansible-vault encrypt ~/.ssh/id_rsa
+# ansible-vault encrypt ~/.ssh/id_rsa.pub
 # creating temp directory for instal
 
 installDir="/tmp/setupmac"
 
-sshkeyDir = "/Users/$(whoami)/Desktop"
+sshkeyDir = "/Users/"$(whoami)"/Desktop"
 mkdir $installDir
 mkdir $sshkeyDir
 
@@ -38,8 +55,8 @@ else
     ansible-playbook -i ./hosts playbook.yml --verbose
 fi
 
-trizicPath =/Users/$(whoami)/Documents/Trizic/
-mkdir $trizicPath
+# trizicPath =/Users/$(whoami)/Documents/Trizic/
+# mkdir $trizicPath
 
 
 
