@@ -42,6 +42,12 @@ github:  #currently working on
   - client-billing
   - messaging-common
 
+filePaths:
+  - ~/Desktop/Trizic/
+  - ~/Desktop/Trizic/platform
+  - ~/Desktop/Trizic/consumer-ui
+  - ~/Desktop/Trizic/trizic-ops
+  - ~/Desktop/Trizic/containers
 
 downloads:
   zoom:
