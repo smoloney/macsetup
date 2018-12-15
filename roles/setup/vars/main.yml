@@ -3,6 +3,7 @@
 general:
   local_home: "{{ lookup('env', 'HOME') }}"
   local_user: "{{ lookup('env', 'USER') }}"
+  local_group: "{{ lookup('env', 'GROUP')}}"
 
 # homebrew
 
