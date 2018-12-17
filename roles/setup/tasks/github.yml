@@ -52,49 +52,50 @@
 - name: Cloning trizic ops
   git:
     repo: "ssh://git@github.com/trizic/trizic-ops.git"
-    dest: = ~/Documents/Trizic/trizic-ops
+    dest: ~/Documents/Trizic/trizic-ops
     accept_hostkey: yes
     clone: yes
 - name: Cloning Containers
   git:
     repo: "ssh://git@github.com/trizic/containers.git"
-    dest: = ~/Documents/Trizic/containers
+    dest: ~/Documents/Trizic/containers
     accept_hostkey: yes
     clone: yes
 - name: Cloning api-docs-advisor
   git:
     repo: "ssh://git@github.com/trizic/api-docs-advisor.git"
-    dest: = ~/Documents/Trizic/api-docs-advisor
+    dest: ~/Documents/Trizic/api-docs-advisor
     accept_hostkey: yes
     clone: yes
 - name: Cloning Api docs consumer
   git:
     repo: "ssh://git@github.com/trizic/api-docs-consumer.git"
-    dest: = ~/Documents/Trizic/api-docs-consumer
+    dest: ~/Documents/Trizic/api-docs-consumer
     accept_hostkey: yes
     clone: yes
 - name: Cloning Custodian Services
   git:
     repo: "ssh://git@github.com/trizic/custodianservices.git"
-    dest: = ~/Documents/Trizic/custodianservices
+    dest: ~/Documents/Trizic/custodianservices
     accept_hostkey: yes
     clone: yes
 - name: Cloning TD-api-java-lib
   git:
     repo: "ssh://git@github.com/trizic/td-api-java-lib.git"
-    dest: = ~/Documents/Trizic/td-api-java-lib
+    dest: ~/Documents/Trizic/td-api-java-lib
     accept_hostkey: yes
     clone: yes
 - name: Cloning Client billing
   git:
     repo: "ssh://git@github.com/trizic/client-billing.git"
-    dest: = ~/Documents/Trizic/client-billing
+    dest: ~/Documents/Trizic/client-billing
     accept_hostkey: yes
     clone: yes
+
 - name: Cloning Messaging common
   git:
     repo: "ssh://git@github.com/trizic/messaging-common.git"
-    dest: = ~/Documents/Trizic/messaging-common
+    dest: ~/Documents/Trizic/messaging-common
     accept_hostkey: yes
     clone: yes
 
