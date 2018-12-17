@@ -25,17 +25,49 @@
 #     dest: /Users/seanvm/Desktop/publickey
 #     mode: 0600
 
-- name: Get new source from git
+# - name: Get new source from git
+#   git:
+#     repo: "ssh://git@github.com/trizic/{{item.repo}}.git"
+#     dest: "{{item.dest}}"
+#     accept_hostkey: yes
+#     clone: yes
+#   with_items: 
+#     - { 
+#         repo: "{{github}}",
+#         dest: "{{filePaths}}"
+#     }
+
+- name: Cloning Platform
   git:
-    repo: "ssh://git@github.com/trizic/{{item.repo}}.git"
-    dest: "{{item.dest}}"
+    repo: "ssh://git@github.com/trizic/platform.git"
+    dest: ~/Documents/Trizic/platform
     accept_hostkey: yes
     clone: yes
-  with_items: 
-    - { 
-        repo: "{{github}}",
-        dest: "{{filePaths}}"
-    }
+- name: Cloning Consumer UI
+  git:
+    repo: "ssh://git@github.com/trizic/consumer-ui.git"
+    dest: ~/Documents/Trizic/consumer-ui
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning trizic ops
+  git:
+    repo: "ssh://git@github.com/trizic/trizic-ops.git"
+    dest: = ~/Documents/Trizic/trizic-ops
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning Containers
+  git:
+    repo: "ssh://git@github.com/trizic/containers.git"
+    dest: = ~/Documents/Trizic/containers
+    accept_hostkey: yes
+    clone: yes
+# - name: Cloning api-docs-advisor
+# - name: Cloning Api docs consumer
+# - name: Cloning Custodian Services
+# - name: Cloning TD-api-java-lib
+# - name: Cloning Client billing
+# - name: Cloning Messaging common
+
 
 
 # - name: create directory if they don't exist
