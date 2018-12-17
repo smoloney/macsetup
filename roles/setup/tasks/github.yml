@@ -27,10 +27,15 @@
 
 - name: Get new source from git
   git:
-    repo: ssh://git@github.com/trizic/platform.git
-    dest: /Users/seanvm/Desktop/GitClone/
+    repo: "ssh://git@github.com/trizic/{{item.repo}}.git"
+    dest: "{{item.dest}}"
     accept_hostkey: yes
     clone: yes
+  with_items: 
+    - { 
+        repo: "{{github}}",
+        dest: "{{filePaths}}"
+    }
 
 
 # - name: create directory if they don't exist
