@@ -37,19 +37,19 @@ github:  #currently working on
   - consumer-ui
   - trizic-ops
   - containers
-  - api-docs-advisor
-  - api-docs-consumer
-  - custodianservices
-  - td-api-java-lib
-  - client-billing
-  - messaging-common
+  # - api-docs-advisor
+  # - api-docs-consumer
+  # - custodianservices
+  # - td-api-java-lib
+  # - client-billing
+  # - messaging-common
 
 filePaths:
-  - ~/Desktop/Trizic/
-  - ~/Desktop/Trizic/platform
-  - ~/Desktop/Trizic/consumer-ui
-  - ~/Desktop/Trizic/trizic-ops
-  - ~/Desktop/Trizic/containers
+  - ~/Documents/Trizic/
+  - ~/Documents/Trizic/platform
+  - ~/Documents/Trizic/consumer-ui
+  - ~/Documents/Trizic/trizic-ops
+  - ~/Documents/Trizic/containers
 
 downloads:
   zoom:
