@@ -32,17 +32,6 @@ cask:
     #- emacs
     # - postman
 
-github:  #currently working on
-  - platform
-  - consumer-ui
-  - trizic-ops
-  - containers
-  # - api-docs-advisor
-  # - api-docs-consumer
-  # - custodianservices
-  # - td-api-java-lib
-  # - client-billing
-  # - messaging-common
 
 filePaths:
   - ~/Documents/Trizic/
@@ -60,6 +49,11 @@ downloads:
   #   name: Emacs
   #   url: https://emacsformacosx.com/emacs-builds/Emacs-26.1-2-universal.dmg
   #   dest: "{{general.local_home}}/Downloads/emacs.dmg"
+
+download_url: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-macosx-x64.dmg
+download_folder: /opt
+java_name: "{{download_folder}}/jdk1.8."
+java_archive: "{{download_folder}}/jdk-8u5-linux-x64.tar.gz" 
 
 git_ssh_public_key: "~/.ssh/my_ssh_key.pub"
 

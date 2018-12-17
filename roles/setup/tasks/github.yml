@@ -61,22 +61,59 @@
     dest: = ~/Documents/Trizic/containers
     accept_hostkey: yes
     clone: yes
-# - name: Cloning api-docs-advisor
-# - name: Cloning Api docs consumer
-# - name: Cloning Custodian Services
-# - name: Cloning TD-api-java-lib
-# - name: Cloning Client billing
-# - name: Cloning Messaging common
+- name: Cloning api-docs-advisor
+  git:
+    repo: "ssh://git@github.com/trizic/api-docs-advisor.git"
+    dest: = ~/Documents/Trizic/api-docs-advisor
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning Api docs consumer
+  git:
+    repo: "ssh://git@github.com/trizic/api-docs-consumer.git"
+    dest: = ~/Documents/Trizic/api-docs-consumer
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning Custodian Services
+  git:
+    repo: "ssh://git@github.com/trizic/custodianservices.git"
+    dest: = ~/Documents/Trizic/custodianservices
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning TD-api-java-lib
+  git:
+    repo: "ssh://git@github.com/trizic/td-api-java-lib.git"
+    dest: = ~/Documents/Trizic/td-api-java-lib
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning Client billing
+  git:
+    repo: "ssh://git@github.com/trizic/client-billing.git"
+    dest: = ~/Documents/Trizic/client-billing
+    accept_hostkey: yes
+    clone: yes
+- name: Cloning Messaging common
+  git:
+    repo: "ssh://git@github.com/trizic/messaging-common.git"
+    dest: = ~/Documents/Trizic/messaging-common
+    accept_hostkey: yes
+    clone: yes
+
+  vars:
 
 
 
-# - name: create directory if they don't exist
-#   file:
-#     path: "{{ item }}"
-#     state: directory
-#     owner: root
-#     group: root
-#     mode: 0775
-#   with_items:
-#     - /data/directory
-#     - /data/another
+  tasks:
+  - name: Download Java
+    command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}}"
+
+#   - name: Unpack archive
+#     command: "tar -zxf {{java_archive}} -C {{download_folder}} creates={{java_name}}"
+
+#   - name: Fix ownership
+#     file: state=directory path={{java_name}} owner=root group=root recurse=yes
+
+#   - name: Make Java available for system
+#     command: 'alternatives --install "/usr/bin/java" "java" "{{java_name}}/bin/java" 2000'
+
+#   - name: Clean up
+#     file: state=absent path={{java_archive}}
