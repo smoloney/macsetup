@@ -14,28 +14,7 @@
   with_items: "{{filePaths}}"
 
 
-# - name: Copy ssh public key file
-#   copy:
-#       content: "{{git_ssh_public_key}}"
-#       dest: /Users/seanvm/Desktop/publickey
-#       mode: 0644
-# - name: Copy ssh private key file
-#   copy:
-#     content: "{{git_ssh_key}}"
-#     dest: /Users/seanvm/Desktop/publickey
-#     mode: 0600
 
-# - name: Get new source from git
-#   git:
-#     repo: "ssh://git@github.com/trizic/{{item.repo}}.git"
-#     dest: "{{item.dest}}"
-#     accept_hostkey: yes
-#     clone: yes
-#   with_items: 
-#     - { 
-#         repo: "{{github}}",
-#         dest: "{{filePaths}}"
-#     }
 
 - name: Cloning Platform
   git:
@@ -98,25 +77,3 @@
     dest: ~/Documents/Trizic/messaging-common
     accept_hostkey: yes
     clone: yes
-
-# - name: Download Java
-#   sudo: yes
-#   command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{java_archive}}"
-- name: Download JDK
-  get_url:
-    url:  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-macosx-x64.dmg
-    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
-    dest: "/tmp/jdk-8u191-macosx-x64.dmg"
-
-
-#   - name: Unpack archive
-#     command: "tar -zxf {{java_archive}} -C {{download_folder}} creates={{java_name}}"
-
-#   - name: Fix ownership
-#     file: state=directory path={{java_name}} owner=root group=root recurse=yes
-
-#   - name: Make Java available for system
-#     command: 'alternatives --install "/usr/bin/java" "java" "{{java_name}}/bin/java" 2000'
-
-#   - name: Clean up
-#     file: state=absent path={{java_archive}}
