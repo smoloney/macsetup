@@ -39,6 +39,7 @@ filePaths:
   - ~/Documents/Trizic/consumer-ui
   - ~/Documents/Trizic/trizic-ops
   - ~/Documents/Trizic/containers
+  - ~/jdk1.8
 
 downloads:
   zoom:
