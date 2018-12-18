@@ -8,13 +8,13 @@
 - name: Download JDK
   get_url:
     url:  "{{ download_url }}"
-    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+    headers: "{{java_header}}"
     dest: "{{java_archive}}"
 
 - name: Download JCE
   get_url: 
     url: "{{jce_download_url}}"
-    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+    headers: "{{java_header}}"
 
     dest: "{{java_name}}/{{jce_zip_file}}"
 
@@ -36,8 +36,8 @@
   shell: hdiutil detach "/Volumes/JDK {{ java_version }} Update {{ java_subversion }}"
 
 - name: Setting java home
-  lineinfile: dest=~/.bashrc line='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home'
-    insertafter='EOF' state=present
+  lineinfile: "dest=~/.bashrc line='export JAVA_HOME={{java_home}}'
+    insertafter='EOF' state=present"
 
 - name: unzip JCE
   unarchive:
@@ -45,6 +45,14 @@
     dest: "{{java_name}}/"
     copy: no
     creates: "{{ java_name }}/jce"
+- name: Copy JCE Jars
+  copy:
+    src: "{{java_name}}/UnlimitedJCEPolicyJDK8/{{item}}"
+    dest: "{{ java_home}}/jre/lib/security"
+    copy: yes
+  with_items:
+    - US_export_policy.jar
+    - local_policy.jar
 
 
 
