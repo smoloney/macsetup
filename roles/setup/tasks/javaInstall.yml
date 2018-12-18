@@ -8,13 +8,14 @@
 - name: Download JDK
   get_url:
     url:  "{{ download_url }}"
-    headers: "{{ java_header }}"
+    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
     dest: "{{java_archive}}"
 
 - name: Download JCE
   get_url: 
     url: "{{jce_download_url}}"
-    headers: "{{ java_header }}"
+    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+
     dest: "{{java_name}}/{{jce_zip_file}}"
 
 
