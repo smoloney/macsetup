@@ -12,9 +12,10 @@
     dest: "{{java_archive}}"
 
 - name: Download JCE
-  get_url: "{{jce_download_url}}"
-  headers: "{{ java_header }}"
-  dest: "{{java_name}}/{{jce_zip_file}}"
+  get_url: 
+    url: "{{jce_download_url}}"
+    headers: "{{ java_header }}"
+    dest: "{{java_name}}/{{jce_zip_file}}"
 
 
 
