@@ -49,7 +49,7 @@
   copy:
     src: ~/jdk1.8/UnlimitedJCEPolicyJDK8/{{item}}"
     dest: "{{ java_home}}/jre/lib/security/{{item}}"
-    remote_src: True
+    #remote_src: True
     #mode: 0664
   become: true
   with_items:
