@@ -50,7 +50,7 @@
     src: "{{java_name}}/UnlimitedJCEPolicyJDK8/{{item}}"
     dest: "{{ java_home}}/jre/lib/security/{{item}}"
     remote_src: True
-    mode: 0664
+    #mode: 0664
   become: true
   with_items:
     - US_export_policy.jar
