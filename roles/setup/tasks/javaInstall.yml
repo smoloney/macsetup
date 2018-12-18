@@ -1,7 +1,7 @@
 
 - name: Create bash profiles
   file:
-    path: ~/.bash_profile
+    path: ~/.bashrc
     state: touch
 
 
@@ -28,5 +28,5 @@
   shell: hdiutil detach "/Volumes/JDK {{ java_version }} Update {{ java_subversion }}"
 
 - name: Setting java home
-  lineinfile: dest=~/.bash_profile line='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home'
+  lineinfile: dest=~/.bashrc line='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home'
     insertafter='EOF' state=present
