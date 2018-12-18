@@ -1,39 +1,15 @@
 
+- name: Create bash profiles
+  file: "~/.bash_profile"
+  state: touch
+
+
 - name: Download JDK
   get_url:
     url:  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-macosx-x64.dmg
     headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
     dest: "{{java_archive}}"
 
-
-
-
-# - name: Mount $app_name_pretty image
-#   command: hdiutil attach jdk.dmg chdir=~/Downloads
-
-
-
-
-# - name: Remove existing app if present
-#   file: path=/Applications/jdk.app state=absent
-#   when_string: $installer_type == 'app'
-
-# - name: Copy $app_name_pretty app to Applications directory
-#   command: cp -R /Volumes/JDK\ 8\ Update\ 191/JDK\ 8\ Update\ 191/.pkg /Applications
-#   when_string: $installer_type == 'app'
-# - name: Install $app_name_pretty pkg
-#   command: sudo installer -package $mount_path$app_name.pkg -target $install_target
-#   when_string: $installer_type == 'pkg'
-# - name: Unmount $app_name_pretty image
-#   command: hdiutil detach $mount_path
-
-
-  #---
-# file: use-tarball.yml
-# install Oracle JDK 1.x on Mac OS X
-#
-# See: #      https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html
-#
 
 - name: mount the downloaded dmg
   shell: hdiutil attach ~/jdk-8u5.dmg
@@ -51,8 +27,5 @@
   shell: hdiutil detach "/Volumes/JDK {{ java_version }} Update {{ java_subversion }}"
 
 - name: Setting java home
-  shell: echo JAVA_HOME is $JAVA_HOME
-  environment:
-     JAVA_HOME: /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
-  register: shellout
-- debug: var=shellout
+  lineinfile: dest=~/.bash_profile line='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home'
+    insertafter='EOF' state=present
