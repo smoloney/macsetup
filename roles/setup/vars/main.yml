@@ -59,7 +59,7 @@ java_archive: "{{download_folder}}/jdk-8u5.dmg"
 git_ssh_public_key: "~/.ssh/my_ssh_key.pub"
 
 java_version: "8"
-java_subversion "191"
+java_subversion: "191"
 
 
 git_ssh_key: "~/.ssh/my_ssh_key"
