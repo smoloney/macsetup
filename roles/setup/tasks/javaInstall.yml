@@ -7,9 +7,15 @@
 
 - name: Download JDK
   get_url:
-    url:  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-macosx-x64.dmg
-    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+    url:  "{{ download_url }}"
+    headers: "{{ java_header }}"
     dest: "{{java_archive}}"
+
+- name: Download JCE
+  get_url: "{{jce_download_url}}"
+  headers: "{{ java_header }}"
+  dest: "{{java_name}}/{{jce_zip_file}}"
+
 
 
 - name: mount the downloaded dmg
@@ -30,3 +36,14 @@
 - name: Setting java home
   lineinfile: dest=~/.bashrc line='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home'
     insertafter='EOF' state=present
+
+- name: unzip JCE
+  unarchive:
+    src: "{{java_name}}/{{jce_zip_file}}"
+    dest: "{{java_name}}/"
+    copy: no
+    creates: "{{ java_name }}/jce"
+
+
+
+
