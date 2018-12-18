@@ -54,7 +54,7 @@ downloads:
 download_url: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-macosx-x64.dmg
 download_folder: ~/
 java_name: "{{download_folder}}jdk1.8/"
-java_archive: "{{download_folder}}/jdk-8u5.dmg" 
+java_archive: "{{download_folder}}jdk-8u5.dmg" 
 
 git_ssh_public_key: "~/.ssh/my_ssh_key.pub"
 
