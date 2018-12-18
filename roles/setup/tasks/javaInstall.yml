@@ -1,7 +1,8 @@
 
 - name: Create bash profiles
-  file: "~/.bash_profile"
-  state: touch
+  file:
+    path: ~/.bash_profile
+    state: touch
 
 
 - name: Download JDK
