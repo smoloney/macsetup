@@ -42,7 +42,7 @@
 - name: unzip JCE
   unarchive:
     src: "{{java_name}}/{{jce_zip_file}}"
-    dest: /var/root/
+    dest: "{{java_name}}/"
     copy: no
     creates: "{{ java_name }}/jce"
 # - name: Copy JCE Jars
@@ -58,6 +58,7 @@
 #     - local_policy.jar
 - name: install JCE policies
   copy:
+   sudo: yes
    src: "{{ java_name }}/{{ jce_folder }}/{{ item }}"
    dest: "{{ java_home }}/jre/lib/security/{{ item }}"
    remote_src: True
