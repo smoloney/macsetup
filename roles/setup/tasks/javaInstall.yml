@@ -45,7 +45,7 @@
   shell: >
     installer
     -pkg "/Volumes/JDK {{ java_version }} Update {{ java_subversion }}/JDK {{ java_version }} Update {{ java_subversion }}.pkg"
-    -target /
+    -target ~
 
 - name: unmount the downloaded dmg
   shell: hdiutil detach "/Volumes/JDK {{ java_version }} Update {{ java_subversion }}"
