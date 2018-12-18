@@ -58,7 +58,7 @@
 #     - local_policy.jar
 - name: install JCE policies
   copy:
-   sudo: yes
+   #sudo: yes
    src: "{{ java_name }}/{{ jce_folder }}/{{ item }}"
    dest: "{{ java_home }}/jre/lib/security/{{ item }}"
    remote_src: True
