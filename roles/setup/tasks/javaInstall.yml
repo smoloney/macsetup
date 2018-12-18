@@ -47,7 +47,7 @@
     creates: "{{ java_name }}/jce"
 - name: Copy JCE Jars
   copy:
-    src: ~/jdk1.8/UnlimitedJCEPolicyJDK8/{{item}}"
+    src: /var/root/UnlimitedJCEPolicyJDK8/{{item}}"
     dest: "{{ java_home}}/jre/lib/security/{{item}}"
     remote_src: True
     #mode: 0664
