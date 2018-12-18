@@ -57,6 +57,7 @@ java_name: "{{download_folder}}jdk1.8"
 java_archive: "{{download_folder}}jdk-8u5.dmg" 
 
 jce_download_url: http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip
+jce_folder: UnlimitedJCEPolicyJDK8
 java_home: /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 jce_zip_file: jce.zip
 java_header: 'Cookie:oraclelicense=accept-securebackup-cookie'

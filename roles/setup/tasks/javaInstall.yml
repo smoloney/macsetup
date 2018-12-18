@@ -45,17 +45,27 @@
     dest: /var/root/
     copy: no
     creates: "{{ java_name }}/jce"
-- name: Copy JCE Jars
+# - name: Copy JCE Jars
+#   copy:
+#     sudo: yes
+#     src: /var/root/UnlimitedJCEPolicyJDK8/{{item}}"
+#     dest: "{{ java_home}}/jre/lib/security/{{item}}"
+#     remote_src: True
+#     #mode: 0664
+#   become: true
+#   with_items:
+#     - US_export_policy.jar
+#     - local_policy.jar
+- name: install JCE policies
   copy:
-    sudo: yes
-    src: /var/root/UnlimitedJCEPolicyJDK8/{{item}}"
-    dest: "{{ java_home}}/jre/lib/security/{{item}}"
-    remote_src: True
-    #mode: 0664
-  become: true
-  with_items:
-    - US_export_policy.jar
+   src: "{{ java_name }}/{{ jce_folder }}/{{ item }}"
+   dest: "{{ java_home }}/jre/lib/security/{{ item }}"
+   remote_src: True
+   mode: 0664
+   become: true
+   with_items:
     - local_policy.jar
+    - US_export_policy.jar
 
 
 
