@@ -36,7 +36,7 @@
 #
 
 - name: mount the downloaded dmg
-  shell: hdiutil attach "{{ java_archive }}"
+  shell: hdiutil attach "{{download_folder}}jdk-8u5.dmg"
 
 
 - name: install the pkg file from the dmg
