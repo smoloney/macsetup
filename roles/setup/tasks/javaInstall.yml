@@ -61,7 +61,7 @@
    #sudo: yes
    src: "{{ java_name }}/{{ jce_folder }}/{{ item }}"
    dest: "{{ java_home }}/jre/lib/security/{{ item }}"
-   remote_src: True
+   #remote_src: True
    mode: 0664
   become: true
   with_items:
