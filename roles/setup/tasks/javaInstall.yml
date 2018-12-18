@@ -42,7 +42,7 @@
 - name: unzip JCE
   unarchive:
     src: "{{java_name}}/{{jce_zip_file}}"
-    dest: "{{java_name}}/"
+    dest: /var/root/
     copy: no
     creates: "{{ java_name }}/jce"
 - name: Copy JCE Jars
