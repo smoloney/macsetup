@@ -8,4 +8,4 @@
   include: github.yml
 
 - name: Java Install
-  include javaInstall.yml
+  include: javaInstall.yml
