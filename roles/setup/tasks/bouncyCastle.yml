@@ -15,5 +15,5 @@
   template:
     
     src: templates/java_security.j2
-    dest: "{{ java_home }}/jre/lib/security/java_security"
+    dest: "{{ java_home }}/jre/lib/security/java.security"
   become: yes
