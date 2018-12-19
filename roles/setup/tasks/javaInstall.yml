@@ -56,12 +56,12 @@
     - local_policy.jar
     - US_export_policy.jar
 
-- name: Java Cleanup
-  file: path={{ item }} state=absent
+# - name: Java Cleanup
+#   file: path={{ item }} state=absent
 
-  with_items:
-    - "{{ java_name} }/{{ jce_folder }}"
-    - "{{ java_name} }/{{  jce_zip_file }}"
+#   with_items:
+#     - "{{ java_name} }/{{ jce_folder }}"
+#     - "{{ java_name} }/{{  jce_zip_file }}"
 
 
 
