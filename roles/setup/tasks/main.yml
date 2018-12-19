@@ -1,6 +1,6 @@
 
-# - name: Java Install
-#   include: javaInstall.yml
+- name: Java Install
+  include: javaInstall.yml
 
 - name: Bouncy Castle Install
   include: bouncyCastle.yml
