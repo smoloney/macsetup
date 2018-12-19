@@ -8,6 +8,7 @@
     src: "{{ bouncy_download}}/{{ bouncy_jar }}"
     dest: "{{ java_home }}/jre/lib/ext/{{ bouncy_jar }}"
     mode: 0664
+    remote_src: True
   become: True
 
 - name: Bouncy Castle Template
