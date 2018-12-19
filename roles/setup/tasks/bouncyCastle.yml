@@ -1,11 +1,11 @@
 - name: Download Bouncy Castle
   get_url:
     url: "{{ bouncy_url }} "
-    dest: "{{ bouncy_download }}/{{bouncy_jar}}"
+    dest: "{{ bouncy_download }}"
 
 - name: Copy Bouncy Castle
   copy:
-    src: "{{ bouncy_download}}/{{ bouncy_jar }}"
+    src: "{{ bouncy_download}}"
     dest: "{{ java_home }}/jre/lib/ext/{{ bouncy_jar }}"
     mode: 0664
     remote_src: True
