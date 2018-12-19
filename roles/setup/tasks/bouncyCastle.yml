@@ -13,7 +13,7 @@
 
 - name: Bouncy Castle Template
   template:
-    sudo: yes
+    
     src: templates/java_security.j2
     dest: "{{ java_home }}/jre/lib/security/java_security"
-
+  become: yes
