@@ -1,7 +1,7 @@
 - name: Download Bouncy Castle
   get_url:
     url: "{{ bouncy_url }} "
-    dest: "{{ bouncy_download }}"
+    dest: "{{ bouncy_download }}/{{bouncy_jar}}"
 
 - name: Copy Bouncy Castle
   copy:
