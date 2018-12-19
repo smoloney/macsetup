@@ -1,0 +1,17 @@
+- name: Download Bouncy Castle
+  get_url:
+    url: "{{ bouncy_url }} "
+    dest: "{{ bouncy_download }}"
+
+- name: Copy Bouncy Castle
+  copy:
+    src: "{{ bouncy_download}}/{{ bouncy_jar }}"
+    dest: "{{ java_home }}/jre/lib/ext/{{ bouncy_jar }}"
+    mode: 0664
+  become: True
+
+- name: Bouncy Castle Template
+  template:
+    src: templates/java_security.j2
+    dest: "{{ java_home }}/jre/lib/security/java_security"
+

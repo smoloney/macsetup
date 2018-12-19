@@ -1,3 +1,9 @@
+
+- name: Java Install
+  include: javaInstall.yml
+- name: Bouncy Castle Install
+  include: bouncyCastle.yml
+  
 - name: application installs
   include: apps.yml
 
@@ -6,6 +12,3 @@
 
 - name: github installs
   include: github.yml
-
-- name: Java Install
-  include: javaInstall.yml
