@@ -8,10 +8,9 @@
     path: "{{item}}"
     state: directory
     owner: "{{general.local_user}}"
-    #group: "{{general.local_group}}"
-    #mode: 0775
 
-  with_items: "{{filePaths}}"
+
+  with_items: "{{ filePaths }}"
 
 
 

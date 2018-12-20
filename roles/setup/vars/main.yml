@@ -28,7 +28,7 @@ cask:
     - docker
     - docker-compose
     - vagrant
-    # - virtualbox #causing issues
+    - virtualbox #causing issues
     - emacs
     - postman
 
