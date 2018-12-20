@@ -4,17 +4,20 @@
   include: homebrew.yml
   
 
-- name: start installing homebrew applications
+- name: Installing Homebrew Apps
   homebrew:
     name: "{{item}}"
     state: latest
   with_items: "{{applications}}"
 
-- name: start installing homebrew cask applications
+- name: Installing Homebrew Casks
   homebrew_cask:
     name: "{{item}}"
     state: installed 
   with_items: "{{cask}}"
+- name: Installing virtualbox
+  command: brew cask install --force virtualbox
+
 - name: getting downloads
   get_url:
     url: "{{item.value.url}}"
