@@ -52,7 +52,7 @@ downloads:
   #   dest: "{{general.local_home}}/Downloads/emacs.dmg"
 
 bouncy_url: http://www.bouncycastle.org/download/bcprov-jdk15on-160.jar
-bouncy_download: /tmp/macsetup
+bouncy_download: /tmp/{{bouncy_jar}}
 bouncy_jar: bcprov-jdk15on-160.jar
 
 download_url: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-macosx-x64.dmg

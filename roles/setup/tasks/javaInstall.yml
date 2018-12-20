@@ -4,7 +4,10 @@
     path: ~/.bashrc
     state: touch
 
-
+- name: Making Java Directory
+  file:
+    path: "{{ java_name }}"
+    state: directory
 - name: Download JDK
   get_url:
     url:  "{{ download_url }}"
