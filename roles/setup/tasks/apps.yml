@@ -4,23 +4,38 @@
   include: homebrew.yml
   
 
-- name: Installing Homebrew Apps
-  homebrew:
-    name: "{{item}}"
-    state: latest
-  with_items: "{{applications}}"
+# - name: Installing Homebrew Apps
+#   homebrew:
+#     name: "{{item}}"
+#     state: latest
+#   with_items: "{{applications}}"
 
-- name: Installing Homebrew Casks
-  homebrew_cask:
-    name: "{{item}}"
-    state: installed 
-  with_items: "{{cask}}"
-- name: Installing virtualbox
-  command: brew cask install --force virtualbox
+# - name: Installing Homebrew Casks
+#   homebrew_cask:
+#     name: "{{item}}"
+#     state: installed 
+#   with_items: "{{cask}}"
+# - name: Installing virtualbox
+#   command: brew cask install --force virtualbox
 
-- name: getting downloads
-  get_url:
-    url: "{{item.value.url}}"
-    dest: "{{item.value.dest}}"
-  with_dict: "{{downloads}}"    
+- name: Testing var
+  shell: "echo ${{ ide }} "
+
+
+# - name: Installing Eclipse
+#   homebrew_cask:
+#     name: eclipse-jee
+#     state: installed
+#   when: ide == 'eclipse'
+# - name: Installing Intellij
+#   homebrew_cask:
+#     name: intellij-idea
+#     state: installed
+#   when: ide == 'intellij'
+
+# - name: getting downloads
+#   get_url:
+#     url: "{{item.value.url}}"
+#     dest: "{{item.value.dest}}"
+#   with_dict: "{{downloads}}"    
 
