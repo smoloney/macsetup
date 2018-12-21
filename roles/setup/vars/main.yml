@@ -43,15 +43,6 @@ filePaths:
   - ~/Documents/Trizic/containers
   - ~/jdk1.8
 
-downloads:
-  zoom:
-    name: Zoom
-    url: https://zoom.us/support/download?os=mac
-    dest: "{{general.local_home}}/Downloads/zoom.pkg"
-  # emacs:
-  #   name: Emacs
-  #   url: https://emacsformacosx.com/emacs-builds/Emacs-26.1-2-universal.dmg
-  #   dest: "{{general.local_home}}/Downloads/emacs.dmg"
 
 bouncy_url: http://www.bouncycastle.org/download/bcprov-jdk15on-160.jar
 bouncy_download: /tmp/{{bouncy_jar}}
@@ -82,7 +73,7 @@ dockPrograms:
   - virtualbox
   - postman
   - docker
-  - google-chrome
+  - Google Chrome
 
 
 
