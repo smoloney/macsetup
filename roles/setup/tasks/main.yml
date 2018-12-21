@@ -13,3 +13,5 @@
 
 - name: github installs
   include: github.yml
+- name: Dock setup
+  include: Dock/tasks/dock.yml
