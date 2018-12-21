@@ -22,7 +22,7 @@ applications:
 # Homebrew cask
 
 cask:
-    # - google-chrome
+    - google-chrome
     - slack
     - iterm2
     - docker
@@ -31,6 +31,8 @@ cask:
     - virtualbox #causing issues
     - emacs
     - postman
+    - zoom
+    - zoomus
 
 
 filePaths:
@@ -75,7 +77,12 @@ java_subversion: "191"
 git_ssh_key: "~/.ssh/my_ssh_key"
 
 dockPrograms:
-  - Photo Booth
+  - slack
+  - iterm
+  - virtualbox
+  - postman
+  - docker
+  - google-chrome
 
 
 
