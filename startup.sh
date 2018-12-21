@@ -5,6 +5,9 @@
 echo ===========================
 echo "|    Mac Setup Started   |"
 echo ===========================
+
+IDE = read -p "Enter the preferred IDE (Eclipse or Intellij): "
+echo $IDE
 # Base line packages
 if ! [[ -e ~/.ssh/id_rsa ]]; then
 echo "creating ssh key"
@@ -33,7 +36,7 @@ sudo pip install cryptography
 sudo easy_install ansible
 sudo pip install ansible-vault
  ansible-vault encrypt ~/.ssh/id_rsa
-# ansible-vault encrypt ~/.ssh/id_rsa.pub
+
 # creating temp directory for instal
 
 installDir="/tmp/setupmac"
@@ -54,11 +57,9 @@ if [! $installDir ]; then
     exit 1
 else
     cd $installDir
-    ansible-playbook -i ./hosts playbook.yml --verbose
+    ansible-playbook -i ./hosts playbook.yml --verbose --ide "$IDE"
 fi
 
-# trizicPath =/Users/$(whoami)/Documents/Trizic/
-# mkdir $trizicPath
 
 
 
