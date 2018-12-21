@@ -74,6 +74,9 @@ java_subversion: "191"
 
 git_ssh_key: "~/.ssh/my_ssh_key"
 
+dockPrograms:
+  - Photo Booth
+
 
 
 
