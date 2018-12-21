@@ -22,11 +22,11 @@
   shell: "echo ${{ ide }} "
 
 
-# - name: Installing Eclipse
-#   homebrew_cask:
-#     name: eclipse-jee
-#     state: installed
-#   when: ide == 'eclipse'
+- name: Installing Eclipse
+  homebrew_cask:
+    name: eclipse-jee
+    state: installed
+  when: ide == 'eclipse'
 # - name: Installing Intellij
 #   homebrew_cask:
 #     name: intellij-idea
