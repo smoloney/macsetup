@@ -5,8 +5,8 @@
 echo ===========================
 echo "|    Mac Setup Started   |"
 echo ===========================
-
-IDE = read -p "Enter the preferred IDE (Eclipse or Intellij): "
+echo "Enter the preferred IDE (Eclipse or Intellij): "
+read IDE
 echo $IDE
 # Base line packages
 if ! [[ -e ~/.ssh/id_rsa ]]; then
