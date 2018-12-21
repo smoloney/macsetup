@@ -27,11 +27,11 @@
     name: eclipse-jee
     state: installed
   when: ide == 'eclipse'
-# - name: Installing Intellij
-#   homebrew_cask:
-#     name: intellij-idea
-#     state: installed
-#   when: ide == 'intellij'
+- name: Installing Intellij
+  homebrew_cask:
+    name: intellij-idea
+    state: installed
+  when: ide == 'intellij'
 
 # - name: getting downloads
 #   get_url:
