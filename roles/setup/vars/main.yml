@@ -70,7 +70,7 @@ git_ssh_key: "~/.ssh/my_ssh_key"
 dockPrograms:
   - slack
   - iterm
-  - virtualbox
+  - VirtualBox
   - postman
   - docker
   - Google Chrome
