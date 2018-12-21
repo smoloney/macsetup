@@ -33,9 +33,9 @@
     state: installed
   when: ide == 'intellij'
 
-# - name: getting downloads
-#   get_url:
-#     url: "{{item.value.url}}"
-#     dest: "{{item.value.dest}}"
-#   with_dict: "{{downloads}}"    
+- name: getting downloads
+  get_url:
+    url: "{{item.value.url}}"
+    dest: "{{item.value.dest}}"
+  with_dict: "{{downloads}}"    
 
