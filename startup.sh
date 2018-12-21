@@ -57,7 +57,7 @@ if [! $installDir ]; then
     exit 1
 else
     cd $installDir
-    ansible-playbook -i ./hosts playbook.yml --verbose --ide "$IDE"
+    ansible-playbook -i ./hosts playbook.yml --verbose --extra-vars "ide=$IDE"
 fi
 
 
