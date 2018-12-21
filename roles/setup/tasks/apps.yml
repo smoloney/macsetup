@@ -4,23 +4,19 @@
   include: homebrew.yml
   
 
-# - name: Installing Homebrew Apps
-#   homebrew:
-#     name: "{{item}}"
-#     state: latest
-#   with_items: "{{applications}}"
+- name: Installing Homebrew Apps
+  homebrew:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{applications}}"
 
-# - name: Installing Homebrew Casks
-#   homebrew_cask:
-#     name: "{{item}}"
-#     state: installed 
-#   with_items: "{{cask}}"
-# - name: Installing virtualbox
-#   command: brew cask install --force virtualbox
-
-- name: Testing var
-  shell: "echo ${{ ide }} "
-
+- name: Installing Homebrew Casks
+  homebrew_cask:
+    name: "{{item}}"
+    state: installed 
+  with_items: "{{cask}}"
+- name: Installing virtualbox
+  command: brew cask install --force virtualbox
 
 - name: Installing Eclipse
   homebrew_cask:
